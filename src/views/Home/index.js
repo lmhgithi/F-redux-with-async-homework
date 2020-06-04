@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import signInImg from '../../assets/sign-in.jpg';
-// import signOutImg from '../../assets/sign-out.jpg';
+import loadingImg from '../../assets/loading.jpg';
+import loginFailed from '../../assets/loginFailed.jpg';
 
 class Home extends Component {
   render() {
@@ -11,16 +11,19 @@ class Home extends Component {
         <ol>
           <li>
             请使用<code>redux-thunk</code>, <code>redux-promise</code> 或其他Redux异步数据流处理库对
-            <strong>登录</strong>过程进行改造
+            <strong>登录</strong>过程进行改造。
           </li>
           <li>
             对于登录过程，需要新增两种状态，并实现成如下效果：
             <ul>
               <li>状态-登录中：</li>
-              <img alt="登录中"/>
+              <img src={loadingImg} alt="登录中" />
               <li>状态-登录失败：</li>
-              <img alt="登录失败"/>
+              <img src={loginFailed} alt="登录失败" />
             </ul>
+          </li>
+          <li>
+            登录失败，点击<strong>登录</strong>可重新登录，点击<strong>取消</strong>回到未登录状态。
           </li>
         </ol>
       </div>
