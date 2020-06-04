@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { modules } from '../utils';
-import './menu.scss';
+import './Menu.scss';
 
 class Menu extends Component {
   render() {
