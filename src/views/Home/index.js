@@ -23,7 +23,8 @@ class Home extends Component {
             </ul>
           </li>
           <li>
-            登录失败，点击<strong>登录</strong>可重新登录，点击<strong>取消</strong>回到未登录状态。
+            登录失败，点击<strong>登录</strong>可重新登录，点击<strong>取消</strong>回到
+            <strong>初始</strong>未登录状态。
           </li>
         </ol>
       </div>
