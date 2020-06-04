@@ -1,0 +1,15 @@
+.app {
+  height: 100%;
+  overflow: hidden;
+
+  .main {
+    width: 84%;
+    float: left;
+    overflow-y: scroll;
+    height: calc(100% - #{60px});
+  }
+
+  .main-view {
+    padding: 0 20px;
+  }
+}

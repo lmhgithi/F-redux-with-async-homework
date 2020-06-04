@@ -1,0 +1,31 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  background: #FAFAFA;
+  color:#262626;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}

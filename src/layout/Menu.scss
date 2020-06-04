@@ -1,0 +1,22 @@
+.menu {
+  background-color: #001529;
+  height: calc(100% - #{60px});
+  width: 16%;
+  float: left;
+
+  ul {
+    margin-top: 10px;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.65);
+    width: calc(100% - #{60px});
+    padding: 14px 30px;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
