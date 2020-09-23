@@ -27,8 +27,8 @@ class Menu extends Component {
   }
 }
 
-const mapStateToProps = ({ userInfo }) => ({
-  userInfo
+const mapStateToProps = state => ({
+  userInfo: state.userInfo
 });
 
 export default connect(mapStateToProps)(Menu);

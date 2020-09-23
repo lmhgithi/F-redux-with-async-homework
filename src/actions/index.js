@@ -1,14 +1,36 @@
-export const setUserInfo = info => {
-  // eslint-disable-line
-  return {
-    type: 'SET_USER_INFO',
-    payload: info
-  };
-};
-
-export const clearUserInfo = () => {
+export const logOut = () => {
   // eslint-disable-line
   return {
     type: 'CLEAR_USER_INFO'
   };
-}
+};
+
+const fetchInfoRequest = () => {
+  return {
+    type: 'FETCH_INFO_REQUEST'
+  };
+};
+
+const fetchInfoReceive = data => {
+  return {
+    type: 'FETCH_INFO_RECEIVE',
+    payload: data
+  };
+};
+
+// thunk
+export const fetchInfo = () => dispatch => {
+  dispatch(fetchInfoRequest());
+  return fetch('https://my-json-server.typicode.com/kevindongzg/demo/login')
+    .then(res => res.json())
+    .then(data => dispatch(fetchInfoReceive(data)));
+};
+
+// promise
+// export const fetchInfo = dispatch =>
+//   new Promise(resolve => {
+//     dispatch(fetchInfoRequest());
+//     return fetch('https://my-json-server.typicode.com/kevindongzg/demo/login').then(res =>
+//       resolve(fetchInfoReceive(res.json()))
+//     );
+//   });
