@@ -40,8 +40,14 @@ const mapDispatchToProps = dispatch => ({
   handleSignOut: () => {
     dispatch(logOut());
   },
+  // thunk
+  // handleFetchInfo: () => {
+  //   dispatch(fetchInfo());
+  // },
+
+  //promise
   handleFetchInfo: () => {
-    dispatch(fetchInfo());
+    dispatch(fetchInfo(dispatch));
   }
 });
 

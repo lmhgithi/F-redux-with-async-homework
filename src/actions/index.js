@@ -19,18 +19,17 @@ const fetchInfoReceive = data => {
 };
 
 // thunk
-export const fetchInfo = () => dispatch => {
-  dispatch(fetchInfoRequest());
-  return fetch('https://my-json-server.typicode.com/kevindongzg/demo/login')
-    .then(res => res.json())
-    .then(data => dispatch(fetchInfoReceive(data)));
-};
+// export const fetchInfo = () => dispatch => {
+//   dispatch(fetchInfoRequest());
+//   return fetch('https://my-json-server.typicode.com/kevindongzg/demo/login')
+//     .then(res => res.json())
+//     .then(data => dispatch(fetchInfoReceive(data)));
+// };
 
 // promise
-// export const fetchInfo = dispatch =>
-//   new Promise(resolve => {
-//     dispatch(fetchInfoRequest());
-//     return fetch('https://my-json-server.typicode.com/kevindongzg/demo/login').then(res =>
-//       resolve(fetchInfoReceive(res.json()))
-//     );
-//   });
+export const fetchInfo = dispatch => {
+  dispatch(fetchInfoRequest());
+  return fetch('https://my-json-server.typicode.com/kevindongzg/demo/login').then(res =>
+    fetchInfoReceive(res.json())
+  );
+};
